@@ -13,6 +13,9 @@ However, if you want the AccessName to be different from the ActualName, you can
 
 Now, click the copy button and paste that function somewhere in the parent node of the KSaver. 
 
+### Grouping the parent node
+With the parent node selected, go into `Node > Groups`. Add it to a group `KSave`. This will list it as a node that will be saved. 
+
 ### Using the functions
 In the parent node, you can now use $KSaver.save() or $KSaver.load() to save and load your game data. 
 
