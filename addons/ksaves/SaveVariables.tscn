@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr0kqpakkwnom"]
+
+[ext_resource type="Script" path="res://addons/ksaves/SaveVariables.gd" id="1_m4ko6"]
+
+[node name="SaveVariables" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m4ko6")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 385.0
+scale = Vector2(1, 0.997135)
+
+[node name="AddButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 397.0
+offset_right = 125.0
+offset_bottom = 428.0
+text = "Add Variable"
+
+[node name="CopyButton" type="Button" parent="."]
+layout_mode = 0
+offset_top = 575.0
+offset_right = 125.0
+offset_bottom = 606.0
+text = "Copy
+"
+
+[node name="Export" type="CodeEdit" parent="."]
+layout_mode = 0
+offset_top = 621.0
+offset_right = 389.0
+offset_bottom = 1088.0
+editable = false
+
+[node name="ClearButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 576.0
+offset_right = 261.0
+offset_bottom = 607.0
+text = "Clear"
+
+[node name="VariableName" type="TextEdit" parent="."]
+layout_mode = 0
+offset_top = 437.0
+offset_right = 261.0
+offset_bottom = 477.0
+placeholder_text = "AccessName ActualName"
+
+[connection signal="pressed" from="AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="CopyButton" to="." method="_on_copy_button_pressed"]
+[connection signal="pressed" from="ClearButton" to="." method="_on_clear_button_pressed"]
